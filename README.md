@@ -53,19 +53,32 @@ python main.py
 ---
 ## 📂 Project Structure
 
-app/                # Flask backend + database
+app/      # Flask backend + database
+
 │── __init__.py
+
 │── database.py
+
 │── routes.py
+
 │── templates/
+
 │    ├── visit.html
+
 │    └── thank_you.html
+
 gui/                # PyQt6 desktop GUI
+
 │── __init__.py
+
 │── main_window.py
+
 main.py             # Entry point
+
 requirements.txt    # Dependencies
+
 README.md           # Documentation
+
 .gitignore          # Ignored files
 
 
