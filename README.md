@@ -10,4 +10,7 @@ Desktop + Web application to manage visitors using a local network:
 
 ## 🚀 Installation
 ```bash
+## 🎥 Demo Video
+<video src="docs/demo.mp4" controls width="600"></video>
+
 pip install -r requirements.txt
