@@ -29,6 +29,7 @@ It stores all submissions in a local SQLite database and supports exporting data
 ## ▶️ Usage
 1.Run the application:
 python main.py
+---
 2.Visitor Side:
 -Connect to the local Wi-Fi / hotspot.
 -Scan the generated QR Code.
