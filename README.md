@@ -1,3 +1,4 @@
+
 # Police Academy Visitor Management System
 
 ## 📌 Description
@@ -18,9 +19,88 @@ It stores all submissions in a local SQLite database and supports exporting data
 - 🕌 **Arabic-friendly UI** (RTL support)
 
 ---
+
 ## 🚀 Installation
 
 1. Clone this repository:
    ```bash
    git clone https://github.com/<your-username>/Police-Academy-Visitor-Management-System.git
    cd Police-Academy-Visitor-Management-System
+````
+
+2. Install dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+---
+
+## ▶️ Usage
+
+1. Run the application:
+
+   ```bash
+   python main.py
+   ```
+
+2. **Visitor Side**:
+
+   * Connect to the local Wi-Fi / hotspot.
+   * Scan the generated QR Code.
+   * Fill out the visitor registration form.
+   * Submit your data (saved locally).
+
+3. **Staff Side**:
+
+   * Use the desktop GUI to view visitors.
+   * Search/filter records.
+   * Export submissions to Excel.
+
+---
+
+## 📂 Project Structure
+
+```
+app/                # Flask backend + database
+│── __init__.py
+│── database.py
+│── routes.py
+│── templates/
+│    ├── visit.html
+│    └── thank_you.html
+gui/                # PyQt6 desktop GUI
+│── __init__.py
+│── main_window.py
+main.py             # Entry point
+requirements.txt    # Dependencies
+README.md           # Documentation
+.gitignore          # Ignored files
+docs/               # Documentation media (videos, screenshots, etc.)
+```
+
+---
+
+## 🎥 Demo Video
+
+[📺 Watch the demo](docs/demo.mp4)
+*(Click to download or play the video file)*
+
+---
+
+## 🤝 Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+---
+
+## 📜 License
+
+This project is licensed under the encryptcore License.
+You are free to use, modify, and distribute it with attribution.
+
+
+
+
+
+
