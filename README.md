@@ -27,6 +27,7 @@ It stores all submissions in a local SQLite database and supports exporting data
    cd Police-Academy-Visitor-Management-System
 ---
 ## ▶️ Usage
+
 1.Run the application:
 python main.py
 
@@ -40,3 +41,4 @@ python main.py
 -Use the desktop GUI to view visitors.
 -Search/filter records.
 -Export submissions to Excel.
+
