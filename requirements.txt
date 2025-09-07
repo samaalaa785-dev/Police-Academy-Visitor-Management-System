@@ -1,0 +1,7 @@
+Flask
+PyQt6
+qrcode
+Pillow
+pandas
+openpyxl
+
