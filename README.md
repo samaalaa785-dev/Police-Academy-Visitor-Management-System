@@ -25,3 +25,5 @@ It stores all submissions in a local SQLite database and supports exporting data
    ```bash
    git clone https://github.com/<your-username>/Police-Academy-Visitor-Management-System.git
    cd Police-Academy-Visitor-Management-System
+---
+## ▶️ Usage
