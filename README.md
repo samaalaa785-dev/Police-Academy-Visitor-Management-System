@@ -18,7 +18,6 @@ It stores all submissions in a local SQLite database and supports exporting data
 - 🕌 **Arabic-friendly UI** (RTL support)
 
 ---
-
 ## 🚀 Installation
 
 1. Clone this repository:
