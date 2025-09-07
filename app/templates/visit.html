@@ -1,1 +1,115 @@
 
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <title>Visitor Check-in</title>
+  <style>
+    body {
+      font-family: Tahoma, Arial, sans-serif;
+      background: #f4f6f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .form-container {
+      background: #fff;
+      padding: 25px 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      width: 350px;
+      text-align: center;
+    }
+    h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+    label {
+      display: block;
+      margin-bottom: 15px;
+      text-align: right;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 70px;
+    }
+    button {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+      width: 100%;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+  <script>
+    function validateForm() {
+      const name = document.getElementById('name').value.trim();
+      const nid = document.getElementById('nid').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+
+      const nameRegex = /^[\u0621-\u064Aa-zA-Z ]+$/;
+      if (!nameRegex.test(name)) {
+        alert("❌ الاسم يجب أن يحتوي على حروف فقط (عربية أو إنجليزية).");
+        return false;
+      }
+
+      if (nid.length !== 14) {
+        alert("❌ يجب إدخال رقم البطاقة المكون من 14 رقم بالضبط.");
+        return false;
+      }
+
+      if (phone.length !== 11) {
+        alert("❌ يجب إدخال رقم التليفون المكون من 11 رقم بالضبط.");
+        return false;
+      }
+
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <div class="form-container">
+    <h2>تسجيل زيارة</h2>
+    <form method="post" action="/submit" onsubmit="return validateForm()">
+      <label>الاسم:
+        <input id="name" name="name" required placeholder="اكتب اسمك هنا"
+               oninput="this.value=this.value.replace(/[^\u0621-\u064Aa-zA-Z ]/g,'')">
+      </label>
+      <label>رقم البطاقة/الهوية:
+        <input id="nid" name="national_id" required 
+                placeholder="قم بإدخال رقم البطاقة المكون من 14 رقم"
+                  maxlength="14"
+                  oninput="this.value=this.value.replace(/[^0-9]/g,'').slice(0,14)">
+      </label>
+      <label>التليفون:
+        <input id="phone" name="phone" required 
+               placeholder="قم بإدخال رقم التليفون المكون من 11 رقم"
+                maxlength="11"
+            oninput="this.value=this.value.replace(/[^0-9]/g,'').slice(0,11)">
+      </label>
+      <label>سبب الزيارة:
+        <textarea name="reason" placeholder="اختياري..."></textarea>
+      </label>
+      <button type="submit">إرسال</button>
+    </form>
+  </div>
+</body>
+</html>
+
