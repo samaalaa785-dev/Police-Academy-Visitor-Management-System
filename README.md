@@ -1,4 +1,4 @@
-# Police Academy Visitor Management System
+# Smart Gate Entrance Visitor Management System
 
 ## 📌 Description
 A Desktop + Web hybrid application to manage visitors using a **local network** for the Police Academy.  
